@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TAFTHREADS FASHION creates extraordinary bespoke fashion, kaftans, agbada, trousers, two-piece outfits and suits.">
+<title>TAFTHREADS FASHION WORLD | Extraordinary You</title>
+
+<style>
+:root {
+  --navy: #21166f;
+  --navy-deep: #17104e;
+  --cream: #fbf7f2;
+  --ink: #171717;
+  --muted: #706d78;
+  --accent: #a96b36;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+.container {
+  width: min(1180px, 90%);
+  margin-inline: auto;
+}
+
+.section { padding: 88px 0; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
+  font-weight: 400;
+}
+
+.section-copy {
+  color: var(--muted);
+  max-width: 640px;
+  margin-top: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 23px;
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid var(--navy);
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--navy);
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--white);
+}
+
+.btn-light:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+:focus-visible {
+  outline: 3px solid #c28b54;
+  outline-offset: 3px;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 9px 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(251,247,242,.97);
+  border-bottom: 1px solid #e8e0d8;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 190px;
+}
+
+.brand img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.brand-text small {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bag-button, .menu-toggle {
+  background: none;
+  border: 0;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 23px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 680px;
+  min-height: 82svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--navy-deep);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(23,16,78,.97) 0%,
+    rgba(33,22,111,.88) 45%,
+    rgba(33,22,111,.18) 100%
+  );
+  z-index: 1;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 57%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px,90%);
+  margin: auto;
+  padding: 90px 0;
+}
+
+.hero-copy { max-width: 610px; }
+
+.hero .eyebrow { color: #e8d7ff; }
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: .98;
+  margin: 22px 0;
+  letter-spacing: -2px;
+}
+
+.hero h1 em {
+  color: #e5c5a2;
+  font-style: italic;
+}
+
+.hero p {
+  color: #f0edf8;
+  max-width: 470px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-note {
+  position: absolute;
+  z-index: 2;
+  bottom: 24px;
+  left: 5%;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e8e3f8;
+}
+
+/* SPECIALTIES */
+.specialties {
+  background: var(--white);
+  border-bottom: 1px solid #eee6de;
+}
+
+.specialties-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  padding: 23px 0;
+}
+
+.specialties span {
+  color: var(--navy);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.specialties span:not(:last-child)::after {
+  content: "✦";
+  color: var(--accent);
+  margin-left: 30px;
+}
+
+/* INTRODUCTION */
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro .section-title { margin-top: 12px; }
+
+.intro p {
+  margin: 18px auto 0;
+  color: var(--muted);
+  max-width: 690px;
+}
+
+/* COLLECTIONS */
+.collections { background: var(--white); }
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+.section-heading .section-title { margin-top: 10px; }
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+
+.collection-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  background: #e8e3df;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.collection-card:hover img { transform: scale(1.04); }
+
+.collection-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 55px 22px 22px;
+  color: white;
+  background: linear-gradient(transparent,rgba(15,10,48,.88));
+}
+
+.collection-overlay span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.collection-overlay h3 {
+  font-family: Georgia,serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+/* CAMPAIGN */
+.campaign { background: #f0edf9; }
+
+.campaign-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.campaign-art {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.campaign-copy p {
+  color: var(--muted);
+  margin: 18px 0 25px;
+}
+
+.campaign-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 22px 0 28px;
+}
+
+.campaign-list li {
+  background: var(--navy);
+  color: white;
+  padding: 11px 14px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* FEATURED OUTFIT */
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  background: var(--navy-deep);
+  color: white;
+}
+
+.featured-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  max-height: 760px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.featured-copy {
+  padding: clamp(35px,7vw,90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.featured-copy .eyebrow { color: #e6c8a8; }
+
+.featured-copy h2 {
+  font-family: Georgia,serif;
+  font-size: clamp(35px,4.5vw,56px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+.featured-copy p {
+  color: #e5e1f3;
+  margin-bottom: 25px;
+}
+
+/* STYLE BOARD */
+.style-board { background: var(--cream); }
+
+.style-board img {
+  width: 100%;
+  max-height: 850px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.style-board .section-heading { margin-bottom: 28px; }
+
+/* ABOUT THE BRAND */
+.about { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-logo-panel {
+  min-height: 370px;
+  background: var(--cream);
+  display: grid;
+  place-items: center;
+  padding: 35px;
+}
+
+.about-logo-panel img {
+  width: min(100%, 480px);
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.about-copy h2 { margin: 12px 0 18px; }
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* CONTACT */
+.contact { background: #f0edf9; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 60px;
+}
+
+.contact-details p {
+  margin-top: 15px;
+  color: #5f5b70;
+}
+
+.contact-details strong { color: var(--navy); }
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 16px;
+  border: 1px solid #d9d2e8;
+  background: white;
+  outline-color: var(--navy);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-message {
+  font-size: 12px;
+  margin-top: 12px;
+  color: var(--navy);
+}
+
+/* FOOTER */
+.site-footer {
+  background: #17133d;
+  color: white;
+  padding: 42px 0 22px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 28px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Georgia,serif;
+  font-size: 21px;
+}
+
+.footer-brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  background: white;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 12px;
+}
+
+.footer-social a:hover { color: #e5c5a2; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.18);
+  padding-top: 18px;
+  color: #c7c3df;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 11px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .nav-links { gap: 13px; }
+  .nav-links a { font-size: 9px; }
+  .hero-photo { width: 65%; opacity: .8; }
+  .collection-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .campaign-layout, .about-grid, .contact-grid { gap: 32px; }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .section { padding: 62px 0; }
+  .header-inner { min-height: 72px; }
+  .brand { min-width: 0; gap: 7px; }
+  .brand img { width: 38px; height: 38px; }
+  .brand-text { font-size: 14px; }
+  .brand-text small { font-size: 7px; letter-spacing: 2px; }
+
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    padding: 22px 5%;
+    border-top: 1px solid #eee;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 12px; }
+
+  .hero { min-height: 690px; }
+  .hero-photo {
+    width: 100%;
+    opacity: .52;
+    object-position: 58% center;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(23,16,78,.88),
+      rgba(23,16,78,.5)
+    );
+  }
+
+  .hero h1 { font-size: clamp(46px,13vw,72px); }
+  .hero-note { font-size: 8px; }
+  .specialties span { font-size: 9px; }
+
+  .specialties span:not(:last-child)::after {
+    margin-left: 12px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .collection-card, .collection-card img { min-height: 250px; }
+
+  .collection-overlay { padding: 40px 12px 14px; }
+  .collection-overlay h3 { font-size: 21px; }
+
+  .campaign-layout, .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-art { max-height: 650px; }
+
+  .featured { grid-template-columns: 1fr; }
+
+  .featured-photo {
+    min-height: 400px;
+    max-height: 620px;
+  }
+
+  .featured-copy { padding: 45px 5%; }
+  .about-logo-panel { min-height: 260px; }
+  .footer-top { align-items: flex-start; flex-direction: column; }
+}
+
+/* SMALL PHONES */
+@media (max-width: 400px) {
+  .collection-grid { grid-template-columns: 1fr; }
+  .collection-card, .collection-card img { min-height: 330px; }
+  .campaign-list { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  A Brand for Creating an Extraordinary You · Bespoke Fashion
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="#home" class="brand" aria-label="TAFTHREADS FASHION home">
+      <img src="images/tafthreads-logo.png" alt="TAF THREADS logo">
+      <span class="brand-text">
+        TAF THREADS
+        <small>FASHION · BESPOKE</small>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#campaign">Our Style</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="bag-button" href="#contact">ENQUIRE</a>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <img class="hero-photo"
+      src="images/tafthreads-model.jpeg"
+      alt="TAFTHREADS model wearing a rust-orange and white patterned two-piece outfit">
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <span class="eyebrow">Tailored to Your Identity</span>
+        <h1>A brand for creating an <em>extraordinary you.</em></h1>
+        <p>
+          Discover expressive African fashion, refined tailoring
+          and bespoke pieces made to help you show up with confidence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#collections" class="btn btn-light">Explore Our Styles →</a>
+          <a href="#contact" class="btn">Request a Bespoke Outfit</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-note">
+      TAFTHREADS FASHION · BESPOKE · CONFIDENCE
+    </div>
+  </section>
+
+  <!-- FASHION CATEGORIES -->
+  <section class="specialties">
+    <div class="container specialties-inner">
+      <span>Bespoke</span>
+      <span>Kaftan</span>
+      <span>Agbada</span>
+      <span>Pants</span>
+      <span>Two Piece</span>
+      <span>Suits</span>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="section">
+    <div class="container intro">
+      <span class="eyebrow">Welcome to TAFTHREADS</span>
+      <h2 class="section-title">Style that tells your story.</h2>
+      <p>
+        From everyday statement pieces to carefully tailored occasion
+        wear, TAFTHREADS FASHION brings personality, craftsmanship
+        and confidence together in every look.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="section collections" id="collections">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Find Your Signature Look</span>
+          <h2 class="section-title">Explore Our Collections</h2>
+          <p class="section-copy">
+            Choose a style, then contact us to discuss fabric,
+            fit and custom details.
+          </p>
+        </div>
+        <a href="#contact" class="btn">Make an Enquiry</a>
+      </div>
+
+      <div class="collection-grid">
+
+        <a href="#contact" class="collection-card">
+          <img src="images/tafthreads-style-board.jpeg8 "
+            alt="Patterned TAFTHREADS two-piece outfit" loading="lazy">
+          <div class="collection-overlay">
+            <span>Comfort meets style</span>
+            <h3>Two Piece</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="collection-card">
+          <img src="images/tafthreads-campaign.png"
+            alt="TAFTHREADS campaign featuring a tailored suit" loading="lazy">
+          <div class="collection-overlay">
+            <span>Made for occasions</span>
+            <h3>Suits &amp; Bespoke</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="collection-card">
+          <img src="images/tafthreads-style-board.jpeg"
+            alt="TAFTHREADS fashion style board showcasing tailoring and collections"
+            loading="lazy">
+          <div class="collection-overlay">
+            <span>Tradition, reimagined</span>
+            <h3>Kaftan &amp; Agbada</h3>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPAIGN POSTER -->
+  <section class="section campaign" id="campaign">
+    <div class="container campaign-layout">
+
+      <img class="campaign-art"
+        src="images/tafthreads-campaign.png"
+        alt="TAFTHREADS campaign poster featuring bespoke, kaftan, agbada, pants, two piece and suit styles"
+        loading="lazy">
+
+      <div class="campaign-copy">
+        <span class="eyebrow">The TAFTHREADS Difference</span>
+        <h2 class="section-title">An extraordinary look. Made for you.</h2>
+
+        <p>
+          Whether you are dressing for a celebration, an important
+          meeting or everyday confidence, let's create a look that
+          reflects your personality.
+        </p>
+
+        <ul class="campaign-list">
+          <li>Bespoke</li>
+          <li>Kaftan</li>
+          <li>Agbada</li>
+          <li>Pants</li>
+          <li>Two Piece</li>
+          <li>Suits</li>
+        </ul>
+
+        <a href="#contact" class="btn">Discuss Your Outfit →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED OUTFIT -->
+  <section class="featured">
+    <img class="featured-photo"
+      src="images/tafthreads-model.jpeg"
+      alt="Model showcasing a TAFTHREADS rust-orange patterned two-piece outfit"
+      loading="lazy">
+
+    <div class="featured-copy">
+      <span class="eyebrow">Featured Look</span>
+      <h2>Bold prints.<br>Beautiful presence.</h2>
+      <p>
+        Make a statement with expressive patterns and relaxed tailoring.
+        Contact TAFTHREADS to ask about this look, fabric options and
+        made-to-measure availability.
+      </p>
+      <a href="#contact" class="btn btn-light">Enquire About This Look</a>
+    </div>
+  </section>
+
+  <!-- STYLE BOARD -->
+  <section class="section style-board">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Style with Us</span>
+          <h2 class="section-title">A look for every occasion.</h2>
+        </div>
+      </div>
+
+      <img src="images/tafthreads-style-board.jpeg"
+        alt="TAFTHREADS style board displaying suits, bespoke, agbada, kaftan, pants and two-piece outfits"
+        loading="lazy">
+    </div>
+  </section>
+
+  <!-- ABOUT THE BRAND -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+
+      <div class="about-logo-panel">
+        <img src="images/tafthreads-logo.png"
+          alt="TAF THREADS brand logo" loading="lazy">
+      </div>
+
+      <div class="about-copy">
+        <span class="eyebrow">Our Brand</span>
+        <h2 class="section-title">Wear your identity with pride.</h2>
+
+        <p>
+          TAFTHREADS FASHION celebrates personal style through bespoke
+          clothing and distinctive designs. Our aim is to help every
+          client feel confident in what they wear.
+        </p>
+
+        <p>
+          From kaftans and agbada to suits, pants and two-piece outfits,
+          each enquiry is an opportunity to find the right look for
+          your moment.
+        </p>
+
+        <a href="#contact" class="btn">Talk to TAFTHREADS</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section contact" id="contact">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Let's Create Your Look</span>
+          <h2 class="section-title">Make a Bespoke Enquiry</h2>
+          <p class="section-copy">
+            Tell us what you have in mind. Submit the form to prepare
+            an enquiry message for WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-details">
+          <h3 class="section-title">TAFTHREADS FASHION</h3>
+
+          <p>
+            <strong>Instagram:</strong><br>
+            <a href="https://www.instagram.com/taf_threads/"
+              target="_blank" rel="noopener">@Taf_threads</a>
+          </p>
+
+          <p>
+            <strong>WhatsApp / Phone:</strong><br>
+            <a href="https://wa.me/2347080780800"
+              target="_blank" rel="noopener">070 8078 0800</a>
+          </p>
+
+          <p>
+            <strong>Specialties:</strong><br>
+            Bespoke · Kaftan · Agbada · Pants · Two Piece · Suits
+          </p>
+        </div>
+
+        <form class="contact-form" id="enquiryForm">
+          <label for="customerName">Your name</label>
+          <input id="customerName" name="name"
+            autocomplete="name" required placeholder="Enter your name">
+
+          <label for="customerPhone">Your phone number</label>
+          <input id="customerPhone" name="phone"
+            autocomplete="tel" required placeholder="Enter your phone number">
+
+          <label for="outfitType">What would you like made?</label>
+          <select id="outfitType" name="outfit" required>
+            <option value="">Choose an outfit</option>
+            <option>Bespoke</option>
+            <option>Kaftan</option>
+            <option>Agbada</option>
+            <option>Pants</option>
+            <option>Two Piece</option>
+            <option>Suit</option>
+            <option>Other</option>
+          </select>
+
+          <label for="customerMessage">Your requirements</label>
+          <textarea id="customerMessage" name="message"
+            placeholder="Tell us about the occasion, fabric, preferred colour, measurements or deadline."
+            required></textarea>
+
+          <button type="submit" class="btn">
+            Prepare WhatsApp Enquiry →
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/tafthreads-logo.png" alt="TAF THREADS logo">
+        <span>TAF THREADS</span>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/taf_threads/"
+          target="_blank" rel="noopener">Instagram: @Taf_threads</a>
+
+        <a href="https://wa.me/2347080780800"
+          target="_blank" rel="noopener">WhatsApp: 070 8078 0800</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> TAFTHREADS FASHION. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* WHATSAPP ENQUIRY FORM */
+const enquiryForm = document.getElementById("enquiryForm");
+const formMessage = document.getElementById("formMessage");
+
+enquiryForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const outfit = document.getElementById("outfitType").value;
+  const message = document.getElementById("customerMessage").value.trim();
+
+  if (!name || !phone || !outfit || !message) {
+    formMessage.textContent = "Please complete all fields.";
+    return;
+  }
+
+  const text =
+    "Hello TAFTHREADS FASHION! I would like to make a bespoke enquiry.\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Outfit: " + outfit + "\n" +
+    "Requirements: " + message;
+
+  const whatsappURL =
+    "https://wa.me/2347080780800?text=" + encodeURIComponent(text);
+
+  formMessage.textContent = "Opening WhatsApp with your enquiry...";
+  window.open(whatsappURL, "_blank", "noopener");
+});
+
+/* AUTOMATIC COPYRIGHT YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
